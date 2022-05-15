@@ -7,7 +7,7 @@ import {IndexRouter} from './controllers/v0/index.router';
 import bodyParser from 'body-parser';
 import {config} from './config/config';
 import {V0_FEED_MODELS, V0_USER_MODELS} from './controllers/v0/model.index';
-
+require('dotenv').config();
 
 (async () => {
   await sequelize.addModels(V0_FEED_MODELS);
@@ -18,6 +18,8 @@ import {V0_FEED_MODELS, V0_USER_MODELS} from './controllers/v0/model.index';
 
   const app = express();
   const port = process.env.PORT || 8080;
+
+  
 
   app.use(bodyParser.json());
 
