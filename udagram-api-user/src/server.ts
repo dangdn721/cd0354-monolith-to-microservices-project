@@ -7,13 +7,12 @@ import {IndexRouter} from './controllers/v0/index.router';
 import bodyParser from 'body-parser';
 import {config} from './config/config';
 import {V0_USER_MODELS} from './controllers/v0/model.index';
-require('dotenv').config();
+
 
 (async () => {
   await sequelize.addModels(V0_USER_MODELS);
 
   console.debug("Initialize database connection...");
-  console.log(config.aws_profile)
   await sequelize.sync();
 
   const app = express();
