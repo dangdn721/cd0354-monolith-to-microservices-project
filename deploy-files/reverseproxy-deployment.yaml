@@ -15,7 +15,7 @@ spec:
         service: udagram-reverseproxy
     spec:
       containers:
-        - image: anhleduc1208/udagram-reverseproxy
+        - image: nguoidang1996/udagram-reverseproxy
           name: udagram-reverseproxy
           imagePullPolicy: Always
           resources:

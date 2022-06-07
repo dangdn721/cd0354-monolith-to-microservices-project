@@ -15,7 +15,7 @@ spec:
         service: udagram-api-feed
     spec:
       containers:
-        - image: anhleduc1208/udagram-api-feed
+        - image: nguoidang1996/udagram-api-feed
           name: udagram-api-feed
           imagePullPolicy: Always
           resources:
